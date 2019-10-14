@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text--dark {
+  color: #263238;
+}
+
+.text--light {
+  color: #fff;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.bg--primary {
+  background-color: #004d40;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 60px 0;
+  width: 100%;
+  max-width: 900px;
+}
+
+.section-title {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 50px;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.section-title::after {
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  display: block;
+  content: '';
+}
+
+.text--dark .section-title::after {
+  background-color: #263238;
+}
+
+.testimonials-list {
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 9999px;
+  transition: margin-left 250ms;
+}
+
+.testimonial {
+  padding: 30px 0px;
+  margin: 15px;
+  min-height: 200px;
+}
+
+.testimonial img {
+  border-radius: 50%;
+}
+
+.testimonial:not(:nth-last-child(2)) {
+  margin-right: 15px;
+}
+
+.testimonial:not(:first-child) {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper { 
+    padding: 60px 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper { 
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .wrapper {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+}
+
+.carousel__wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  line-height: 24px;
+  color: #263238;
+  display: block;
+  transform: translateY(-50%);
+  transition: opacity .3s ease-out;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.prev {
+  left: -15px;
+}
+
+.next {
+  right: -15px;
+}
